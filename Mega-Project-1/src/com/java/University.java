@@ -5,10 +5,7 @@ public class University {
     private int code;
     private College college;
 
-    College(String name, int code){
-        this.name = name;
-        this.int = int;
-    }
+
      public String getName(){
          return name;
      }
@@ -18,7 +15,7 @@ public class University {
      public int getCode(){
          return code;
      }
-     public void setCode(){
+     public void setCode(int code){
          this.code = code;
      }
      public College getCollege(){
@@ -33,7 +30,7 @@ public class University {
          System.out.println("University Name : "+getName());
          System.out.println("University Code : "+getCode());
      }
-     public void createCollege(){
+     public void createCollege(College college){
         if(college.getName() != null && college.getLocation() != null){
             this.college = college;
             System.out.println("college Create Operation Performed Successfully");
@@ -64,10 +61,10 @@ public class University {
     public void deleteCollege(String name){
         if(college.getName() == name){
             this.college = null;
-            System.out.println("Department Delete Operation Performed Successfully");
+            System.out.println("College Delete Operation Performed Successfully");
         }
         else{
-            System.out.println("Department Doesn't Exist");
+            System.out.println("College Doesn't Exist");
         }
     }
 }

@@ -5,10 +5,12 @@ public class Department {
     private String staff;
     private Student student;
 
-    Department(String name, String staff ){
+    Department(String name, String staff){
+
         this.name = name;
         this.staff = staff;
     }
+
 
     public String getName(){
         return name;
@@ -34,14 +36,14 @@ public class Department {
         System.out.println("Department Name : "+getName());
         System.out.println("Department Staff Name : "+getStaff());
     }
-    public void createStudent(Student student){
-       if(student.getId() != 0 && student.getName() != null && student.getMailId() != null && student.getContactNumber() != 0.0) {
-                this.student = student;
-           System.out.println("Student Create Operation Performed Successfully");
-       }
-       else{
-           System.out.println("Student Doesn't Exist");
-       }
+    public void createStudent(Student student) {
+        if (student.getId() != 0 && student.getName() != null && student.getMailId() != null && student.getContactNumber() != 0) {
+            this.student = student;
+            System.out.println("Student Create Operation Performed Successfully");
+        } else {
+            System.out.println("Student Doesn't Exist");
+        }
+    }
        public void readStudent(){
            if(student.getId() != 0 && student.getName() != null && student.getMailId() != null && student.getContactNumber() != 0){
                student.displayStudent();
@@ -76,4 +78,4 @@ public class Department {
     }
 
 
-}
+

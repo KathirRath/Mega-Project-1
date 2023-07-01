@@ -5,21 +5,23 @@ public class College {
     private String location;
     private Department department;
 
-    College(String collegeName, String location){
-        this.name = collegeName;
-        this.location = location;
-    }
+     College(String name, String location) {
+
+         this.name = name;
+         this.location = location;
+     }
+
 
     public String getName(){
         return name;
     }
-    public void setName(){
+    public void setName(String name){
         this.name = name;
     }
     public String getLocation(){
         return location;
     }
-    public void setLocation(){
+    public void setLocation(String location){
         this.location = location;
     }
     public Department getDepartment(){
@@ -34,7 +36,7 @@ public class College {
         System.out.println("College Name : "+getName());
         System.out.println("College Location : "+getLocation());
     }
-    public void createDepartment(College college){
+    public void createDepartment(Department department){
         if(department.getName() != null && department.getStaff() != null){
                 this.department = department;
             System.out.println("Department Create Operation Performed Successfully");
